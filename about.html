@@ -1,35 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Contact — BSU Mock Trial</title>
-<style>
-:root{ --crimson:#800000; --gold:#d4af37; --ink:#1b1b1b; --paper:#faf9f7; --muted:#6b7280; --maxw: 980px; }
-html,body{height:100%}
-body{margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Helvetica,Arial,sans-serif; color:var(--ink); background:var(--paper); line-height:1.6}
-.display{font-family: Georgia, "Times New Roman", Times, serif; letter-spacing:.5px}
-.wrap{max-width:var(--maxw); margin:0 auto; padding:28px 20px}
-header{border-bottom:1px solid #eae7e2; background:#fff}
-nav a{color:var(--ink); text-decoration:none; margin-right:18px}
-nav a:hover{color:var(--crimson)}
-.card{background:#fff; border:1px solid #eee7db; border-radius:12px; padding:14px}
-<link rel="stylesheet" href="/assets/main.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About — BSU Mock Trial</title>
+  <meta name="description" content="About the Bridgewater State University Mock Trial Club" />
+
+  <!-- Load the shared stylesheet (root user site, so leading slash is correct) -->
+  <link rel="stylesheet" href="/assets/main.css">
 </head>
 <body>
-<header>
-<div class="wrap" style="display:flex; align-items:center; gap:14px">
-<div class="display" style="font-weight:700">BSU Mock Trial</div>
-<nav style="margin-left:auto" aria-label="Primary">
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="leadership.html">Leadership</a>
-<a href="events.html">Events</a>
-<a href="resources.html">Resources</a>
-</nav>
-</div>
-</header>
-<section id="about">
+  <header class="site">
+    <div class="wrap" style="display:flex; align-items:center; gap:14px">
+      <div class="display" style="font-weight:700">BSU Mock Trial</div>
+      <nav style="margin-left:auto" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="about.html" aria-current="page">About</a>
+        <a href="leadership.html">Leadership</a>
+        <a href="events.html">Events</a>
+        <a href="resources.html">Resources</a>
+        <a href="contact.html">Join</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="about">
       <div class="wrap grid">
         <article class="card">
           <h2>What We Do</h2>
@@ -51,3 +47,18 @@ nav a:hover{color:var(--crimson)}
         </aside>
       </div>
     </section>
+  </main>
+
+  <footer>
+    <div class="wrap" style="text-align:center; padding:32px 20px;">
+      <div class="display" style="font-size:1.2rem; font-weight:700; color:var(--crimson); margin-bottom:6px;">Bridgewater State University Mock Trial Club</div>
+      <div class="smallcaps" style="letter-spacing:.12em; color:var(--muted); margin-bottom:10px;">Established 2025</div>
+      <div style="font-size:.95rem; color:var(--crimson);">© <span id="year"></span> — Veritas • Libertas • Justitia</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
