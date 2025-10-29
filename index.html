@@ -1,18 +1,3 @@
-<!-- =============================
-  BSU MOCK TRIAL — MULTI-PAGE SITE BUNDLE
-  Copy each FILE block into a separate file in your repo.
-  Required files:
-    index.html
-    about.html
-    leadership.html
-    events.html
-    resources.html
-    contact.html
-  ============================= -->
-
-<!-- =============================
-FILE: index.html
-============================= -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,53 +6,93 @@ FILE: index.html
   <title>Bridgewater State University Mock Trial Club</title>
   <meta name="description" content="Bridgewater State University Mock Trial Club — Veritas • Libertas • Justitia" />
   <style>
-    :root{ --crimson:#800000; --gold:#d4af37; --ink:#1b1b1b; --paper:#faf9f7; --muted:#6b7280; --maxw: 980px; }
-    html,body{height:100%}
-    body{margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Helvetica,Arial,sans-serif; color:var(--ink); background:var(--paper); line-height:1.6}
-    .display{font-family: Georgia, "Times New Roman", Times, serif; letter-spacing:.5px}
-    .smallcaps{font-variant-caps:small-caps; letter-spacing:.08em}
-    .wrap{max-width:var(--maxw); margin:0 auto; padding:28px 20px}
+    :root{
+      --crimson:#800000;/* BSU red provided */
+      --gold:#d4af37;   /* requested gold */
+      --ink:#1b1b1b;    /* body text */
+      --paper:#faf9f7;  /* soft white */
+      --muted:#6b7280;  /* subtle gray */
+      --maxw: 900px;    /* readable line length */
+    }
+    html,body{height:100%; scroll-behavior:smooth;}
+    body{
+      margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Helvetica,Arial,sans-serif; color:var(--ink); background:var(--paper);
+      line-height:1.6; font-size:16px; -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+    }
+    /* Ivy / traditional typographic flavor */
+    .display{font-family:"Georgia","Times New Roman",Times,serif; letter-spacing:.5px;}
+    .smallcaps{font-variant-caps:small-caps; letter-spacing:.08em;}
+
+    .wrap{max-width:var(--maxw); margin:0 auto; padding:28px 20px;}
+
     header.site{border-bottom:1px solid #eae7e2; background:linear-gradient(180deg,#fff,#fff 40%,transparent); position:sticky; top:0; z-index:10}
-    .brand{display:flex; align-items:center; gap:14px}
+    .brand{display:flex; align-items:center; gap:14px;}
     .crest{width:44px; height:44px; border-radius:50%; border:2px solid var(--gold); display:grid; place-items:center; background:#fff}
-    .crest svg{width:24px; height:24px; color:var(--crimson)}
+    .crest svg{width:24px; height:24px; color:var(--crimson);}
+
     nav a{color:var(--ink); text-decoration:none; margin-right:18px; font-size:.95rem}
     nav a:hover{color:var(--crimson)}
-    .hero{padding:64px 0 24px; text-align:center}
-    .hero h1{margin:0 0 6px; font-size:clamp(28px,6vw,44px); font-weight:700}
+
+    .hero{padding:64px 0 48px; text-align:center;}
+    .hero h1{margin:0 0 8px; font-size:clamp(28px,6vw,44px); font-weight:700}
     .motto{color:var(--muted); margin:0 0 18px}
-    .divider{display:flex; justify-content:center; align-items:center; gap:14px; margin:18px 0 0}
-    .rule{height:1px; background:linear-gradient(to right,transparent,var(--gold),transparent); width:200px}
-    .bars{font-size:22px; color:var(--gold)}
-    section{padding:28px 0}
-    h2{font-family: Georgia, "Times New Roman", Times, serif; font-weight:700; font-size:clamp(20px,3.5vw,28px); margin:0 0 6px}
+
+    .divider{display:flex; justify-content:center; align-items:center; gap:14px; margin:22px 0 0;}
+    .rule{height:1px; background:linear-gradient(to right,transparent,var(--gold),transparent); width:200px;}
+    .bars{font-size:22px; color:var(--gold)} /* ‖ */
+
+    section{padding:28px 0;}
+    h2{font-family:"Georgia","Times New Roman",Times,serif; font-weight:700; font-size:clamp(20px,3.5vw,28px); margin:0 0 6px}
     .lede{color:var(--muted); margin:0 0 16px}
     .card{background:#fff; border:1px solid #eee7db; border-radius:14px; padding:18px; box-shadow:0 6px 20px rgba(0,0,0,.03)}
     .grid{display:grid; gap:16px}
-    @media(min-width:880px){.grid{grid-template-columns:1fr 1fr}}
+    @media (min-width:820px){ .grid{grid-template-columns:1fr 1fr;}}
+
+    ul.clean{list-style:"—  "; padding-left:1.1rem}
+    ul.tight>li{margin:6px 0}
+
     .cta{display:inline-block; margin-top:8px; padding:10px 16px; border-radius:999px; border:1px solid var(--crimson); color:#fff; background:var(--crimson); text-decoration:none; font-weight:600}
     .cta:hover{filter:brightness(.95)}
+
     footer{border-top:1px solid #eae7e2; color:#6b6b6b}
     .footgrid{display:grid; gap:8px}
-    @media(min-width:760px){.footgrid{grid-template-columns:1fr auto}}
+    @media (min-width:760px){.footgrid{grid-template-columns:1fr auto}}
+
+    .people{display:grid; gap:14px}
+    @media(min-width:820px){.people{grid-template-columns:repeat(3,1fr)}}
+
+    .muted{color:var(--muted)}
   </style>
 </head>
 <body>
   <header class="site">
     <div class="wrap">
       <div class="brand">
-        <span class="crest" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v4"/><path d="M4 7h16"/><path d="M6.5 7 4 12a3 3 0 0 0 6 0L7.5 7"/><path d="M17.5 7 15 12a3 3 0 0 0 6 0L19.5 7"/><path d="M12 7v12"/><path d="M8 19h8"/></svg></span>
+        <span class="crest" aria-hidden="true" title="BSU Mock Trial Crest">
+          <!-- Simple balanced scales icon in SVG using your colors -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 3v4"/>
+            <path d="M4 7h16"/>
+            <path d="M6.5 7 4 12a3 3 0 0 0 6 0L7.5 7"/>
+            <path d="M17.5 7 15 12a3 3 0 0 0 6 0L19.5 7"/>
+            <path d="M12 7v12"/>
+            <path d="M8 19h8"/>
+          </svg>
+        </span>
         <div>
           <div class="smallcaps" style="color:var(--muted); font-size:.9rem">Bridgewater State University</div>
           <div class="display" style="font-size:1.25rem; font-weight:700">Mock Trial Club</div>
         </div>
-        <nav style="margin-left:auto" aria-label="Primary">
-          <a href="about.html">About</a>
-          <a href="leadership.html">Leadership</a>
-          <a href="events.html">Events</a>
-          <a href="resources.html">Resources</a>
-          <a href="contact.html">Contact</a>
-        </nav>
+        <div style="margin-left:auto">
+          <!-- Same-page anchors: NO page separation, smooth scroll -->
+          <nav aria-label="Primary">
+            <a href="#about">About</a>
+            <a href="#leadership">Leadership</a>
+            <a href="#events">Events</a>
+            <a href="#resources">Resources</a>
+            <a href="#join">Join</a>
+          </nav>
+        </div>
       </div>
     </div>
   </header>
@@ -77,22 +102,128 @@ FILE: index.html
       <div class="wrap">
         <h1 class="display">Veritas · Libertas · Justitia</h1>
         <p class="motto">Truth • Liberty • Justice</p>
-        <div class="divider" aria-hidden="true"><span class="rule"></span><span class="bars">‖</span><span class="rule"></span></div>
+        <div class="divider" aria-hidden="true">
+          <span class="rule"></span>
+          <span class="bars">‖</span>
+          <span class="rule"></span>
+        </div>
       </div>
     </section>
 
-    <section>
+    <!-- ABOUT / WHAT WE DO -->
+    <section id="about">
       <div class="wrap grid">
         <article class="card">
           <h2>What We Do</h2>
-          <p class="lede">Disciplined courtroom simulation: case theory, openings, examinations, objections, and closings built from an annual AMTA case.</p>
-          <a class="cta" href="about.html">Learn more</a>
+          <p class="lede">A disciplined courtroom simulation: opening statements, examinations, objections, and closing arguments built on a single case packet.</p>
+          <ul class="clean tight">
+            <li>Attorney &amp; witness roles with coaching</li>
+            <li>Case theory, evidence handling, and objections</li>
+            <li>Composure, clarity, and presence under pressure</li>
+          </ul>
         </article>
-        <article class="card">
+        <aside class="card">
+          <h2>Season at a Glance</h2>
+          <ul class="clean tight">
+            <li>Case release → training workshops</li>
+            <li>Scrimmages and invitationals</li>
+            <li>Regional competition</li>
+          </ul>
+          <a class="cta" href="#join" aria-label="Join BSU Mock Trial">Request to Join</a>
+        </aside>
+      </div>
+    </section>
+
+    <!-- LEADERSHIP (integrated) -->
+    <section id="leadership">
+      <div class="wrap">
+        <div class="card">
+          <h2>Leadership</h2>
+          <div class="people">
+            <div>
+              <div class="display" style="font-size:1.1rem; font-weight:700">Jeremy Klapka</div>
+              <div class="muted">President</div>
+            </div>
+            <div>
+              <div class="display" style="font-size:1.1rem; font-weight:700">Adam Vinton</div>
+              <div class="muted">Vice President</div>
+            </div>
+            <div>
+              <div class="display" style="font-size:1.1rem; font-weight:700">Robert Latorra‑Torres</div>
+              <div class="muted">Treasurer</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EVENTS (integrated) -->
+    <section id="events">
+      <div class="wrap">
+        <div class="card">
+          <h2>Upcoming Events</h2>
+          <div class="muted">No events posted yet.</div>
+          <!-- Example event
+          <div style="margin-top:8px">
+            <div><strong>Workshop: Objections &amp; Evidence</strong></div>
+            <div class="muted">Wed, Sept 10 · 6:00–7:30 PM · DMF 120</div>
+          </div>
+          -->
+        </div>
+      </div>
+    </section>
+
+    <!-- RESOURCES (integrated) -->
+    <section id="resources">
+      <div class="wrap grid">
+        <div class="card">
+          <h2>Core Materials</h2>
+          <ul class="clean tight">
+            <li>AMTA Case Packet (posted when released)</li>
+            <li>Rules of Evidence (AMTA)</li>
+            <li>Objections Quick Reference</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h2>Training</h2>
+          <ul class="clean tight">
+            <li>Opening Statements: structure &amp; theory</li>
+            <li>Direct Examination: form &amp; foundation</li>
+            <li>Cross Examination: control &amp; impeachment</li>
+            <li>Exhibits &amp; Foundations</li>
+          </ul>
+        </div>
+      </div>
+      <div class="wrap">
+        <div class="card" style="margin-top:16px">
+          <h2>Team Documents</h2>
+          <ul class="clean tight">
+            <li>Calendar &amp; Practice Schedule</li>
+            <li>Travel &amp; Tournament Info</li>
+            <li>Standards &amp; Conduct</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- JOIN / CONTACT (integrated) -->
+    <section id="join">
+      <div class="wrap grid">
+        <div class="card">
           <h2>Join Us</h2>
-          <p class="lede">We welcome students who value clarity, composure, and discipline. Tryouts and workshops run at the start of term.</p>
-          <a class="cta" href="contact.html">Contact & Interest</a>
-        </article>
+          <p class="lede">We welcome students committed to clarity, discipline, and growth.</p>
+          <ul class="clean tight">
+            <li>Weekly practices (schedule posted each term)</li>
+            <li>Workshops: objections, openings, crosses</li>
+            <li>Tryouts/placement at start of season</li>
+          </ul>
+          <p>Express interest via email: <a href="mailto:Jklapka@student.bridgew.edu">Jklapka@student.bridgew.edu</a></p>
+        </div>
+        <div class="card">
+          <h2>Contact</h2>
+          <p>Club: Bridgewater State University Mock Trial Club</p>
+          <p>Address: 131 Summer Street, Bridgewater, MA 02325</p>
+        </div>
       </div>
     </section>
   </main>
@@ -105,263 +236,16 @@ FILE: index.html
       </div>
       <div style="text-align:right">
         <div class="smallcaps" style="color:var(--muted)">Established</div>
-        <div>2025</div>
+        <div>MMXXV</div>
       </div>
     </div>
-    <div class="wrap" style="padding-top:0; padding-bottom:40px; color:#8c8c8c; font-size:.9rem">© <span id="year"></span> Bridgewater State University Mock Trial Club</div>
+    <div class="wrap" style="padding-top:0; padding-bottom:40px; color:#8c8c8c; font-size:.9rem">
+      © <span id="year"></span> Bridgewater State University Mock Trial Club — <span style="color:var(--crimson)">Veritas</span> • <span style="color:var(--crimson)">Libertas</span> • <span style="color:var(--crimson)">Justitia</span>
+    </div>
   </footer>
-  <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
-</body>
-</html>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About — BSU Mock Trial</title>
-  <style>
-    :root{ --crimson:#800000; --gold:#d4af37; --ink:#1b1b1b; --paper:#faf9f7; --muted:#6b7280; --maxw: 980px; }
-    html,body{height:100%}
-    body{margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Helvetica,Arial,sans-serif; color:var(--ink); background:var(--paper); line-height:1.6}
-    .display{font-family: Georgia, "Times New Roman", Times, serif; letter-spacing:.5px}
-    .smallcaps{font-variant-caps:small-caps; letter-spacing:.08em}
-    .wrap{max-width:var(--maxw); margin:0 auto; padding:28px 20px}
-    header{border-bottom:1px solid #eae7e2; background:#fff}
-    nav a{color:var(--ink); text-decoration:none; margin-right:18px}
-    nav a:hover{color:var(--crimson)}
-    h1,h2{font-family: Georgia, "Times New Roman", Times, serif}
-    .lede{color:var(--muted)}
-    .card{background:#fff; border:1px solid #eee7db; border-radius:14px; padding:18px}
-    ul.clean{list-style:"—  "; padding-left:1.1rem}
-  </style>
-</head>
-<body>
-  <header>
-    <div class="wrap" style="display:flex; align-items:center; gap:14px">
-      <div class="display" style="font-weight:700">BSU Mock Trial</div>
-      <nav style="margin-left:auto" aria-label="Primary">
-        <a href="index.html">Home</a>
-        <a href="leadership.html">Leadership</a>
-        <a href="events.html">Events</a>
-        <a href="resources.html">Resources</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </div>
-  </header>
-  <main class="wrap">
-    <h1 class="display">About Us</h1>
-    <p class="lede">We are a student‑run program dedicated to trial advocacy at Bridgewater State University. Teams prepare both sides of a single case each season and compete under American Mock Trial Association (AMTA) rules.</p>
-    <div class="card">
-      <h2>What Mock Trial Teaches</h2>
-      <ul class="clean">
-        <li><strong>Courtroom presence</strong> and professional demeanor</li>
-        <li><strong>Clear, structured argumentation</strong> under time limits</li>
-        <li><strong>Strategic thinking & case theory</strong></li>
-        <li><strong>Questioning techniques</strong> for direct and cross</li>
-        <li><strong>Evidence handling</strong> & objections</li>
-        <li><strong>Teamwork and discipline</strong></li>
-      </ul>
-    </div>
-  </main>
-</body>
-</html>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Leadership — BSU Mock Trial</title>
-  <style>
-    :root{ --crimson:#800000; --gold:#d4af37; --ink:#1b1b1b; --paper:#faf9f7; --muted:#6b7280; --maxw: 980px; }
-    html,body{height:100%}
-    body{margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Helvetica,Arial,sans-serif; color:var(--ink); background:var(--paper); line-height:1.6}
-    .display{font-family: Georgia, "Times New Roman", Times, serif; letter-spacing:.5px}
-    .wrap{max-width:var(--maxw); margin:0 auto; padding:28px 20px}
-    header{border-bottom:1px solid #eae7e2; background:#fff}
-    nav a{color:var(--ink); text-decoration:none; margin-right:18px}
-    nav a:hover{color:var(--crimson)}
-    h1,h2{font-family: Georgia, "Times New Roman", Times, serif}
-    .grid{display:grid; gap:14px}
-    @media(min-width:820px){.grid{grid-template-columns:repeat(3,1fr)}}
-    .card{background:#fff; border:1px solid #eee7db; border-radius:12px; padding:14px}
-    .muted{color:var(--muted)}
-  </style>
-</head>
-<body>
-  <header>
-    <div class="wrap" style="display:flex; align-items:center; gap:14px">
-      <div class="display" style="font-weight:700">BSU Mock Trial</div>
-      <nav style="margin-left:auto" aria-label="Primary">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="events.html">Events</a>
-        <a href="resources.html">Resources</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </div>
-  </header>
-  <main class="wrap">
-    <h1 class="display">Executive Board</h1>
-    <div class="grid">
-      <div class="card"><h2 style="margin:.25rem 0">Jeremy Klapka</h2><div class="muted">President</div></div>
-      <div class="card"><h2 style="margin:.25rem 0">Adam Vinton</h2><div class="muted">Vice President</div></div>
-      <div class="card"><h2 style="margin:.25rem 0">Robert Latorra‑Torres</h2><div class="muted">Treasurer</div></div>
-    </div>
-  </main>
-</body>
-</html>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Events — BSU Mock Trial</title>
-  <style>
-    :root{ --crimson:#800000; --gold:#d4af37; --ink:#1b1b1b; --paper:#faf9f7; --muted:#6b7280; --maxw: 980px; }
-    html,body{height:100%}
-    body{margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Helvetica,Arial,sans-serif; color:var(--ink); background:var(--paper); line-height:1.6}
-    .display{font-family: Georgia, "Times New Roman", Times, serif; letter-spacing:.5px}
-    .wrap{max-width:var(--maxw); margin:0 auto; padding:28px 20px}
-    header{border-bottom:1px solid #eae7e2; background:#fff}
-    nav a{color:var(--ink); text-decoration:none; margin-right:18px}
-    nav a:hover{color:var(--crimson)}
-    .card{background:#fff; border:1px solid #eee7db; border-radius:12px; padding:14px}
-    .muted{color:var(--muted)}
-    .list{display:grid; gap:12px}
-  </style>
-</head>
-<body>
-  <header>
-    <div class="wrap" style="display:flex; align-items:center; gap:14px">
-      <div class="display" style="font-weight:700">BSU Mock Trial</div>
-      <nav style="margin-left:auto" aria-label="Primary">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="leadership.html">Leadership</a>
-        <a href="resources.html">Resources</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </div>
-  </header>
-  <main class="wrap">
-    <h1 class="display">Upcoming Events</h1>
-    <div class="card">
-      <div class="list">
-        <div class="muted">No events posted yet.</div>
-        <!-- Example event item
-        <div>
-          <div><strong>Workshop: Objections & Evidence</strong></div>
-          <div class="muted">Wed, Sept 10 · 6:00–7:30 PM · DMF 120</div>
-        </div>
-        -->
-      </div>
-    </div>
-  </main>
-</body>
-</html>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Resources — BSU Mock Trial</title>
-  <style>
-    :root{ --crimson:#800000; --gold:#d4af37; --ink:#1b1b1b; --paper:#faf9f7; --muted:#6b7280; --maxw: 980px; }
-    html,body{height:100%}
-    body{margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Helvetica,Arial,sans-serif; color:var(--ink); background:var(--paper); line-height:1.6}
-    .display{font-family: Georgia, "Times New Roman", Times, serif; letter-spacing:.5px}
-    .wrap{max-width:var(--maxw); margin:0 auto; padding:28px 20px}
-    header{border-bottom:1px solid #eae7e2; background:#fff}
-    nav a{color:var(--ink); text-decoration:none; margin-right:18px}
-    nav a:hover{color:var(--crimson)}
-    .card{background:#fff; border:1px solid #eee7db; border-radius:12px; padding:14px}
-    h2{font-family: Georgia, "Times New Roman", Times, serif}
-    ul.clean{list-style:"—  "; padding-left:1.1rem}
-  </style>
-</head>
-<body>
-  <header>
-    <div class="wrap" style="display:flex; align-items:center; gap:14px">
-      <div class="display" style="font-weight:700">BSU Mock Trial</div>
-      <nav style="margin-left:auto" aria-label="Primary">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="leadership.html">Leadership</a>
-        <a href="events.html">Events</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </div>
-  </header>
-  <main class="wrap">
-    <h1 class="display">Resources</h1>
-    <div class="card">
-      <h2>Core Materials</h2>
-      <ul class="clean">
-        <li>AMTA Case Packet (posted when released)</li>
-        <li>Rules of Evidence (AMTA)</li>
-        <li>Objections Quick Reference</li>
-      </ul>
-    </div>
-    <div class="card" style="margin-top:12px">
-      <h2>Training</h2>
-      <ul class="clean">
-        <li>Opening Statements: structure & theory</li>
-        <li>Direct Examination: form & foundation</li>
-        <li>Cross Examination: control & impeachment</li>
-        <li>Exhibits & Foundations</li>
-      </ul>
-    </div>
-    <div class="card" style="margin-top:12px">
-      <h2>Team Documents</h2>
-      <ul class="clean">
-        <li>Calendar & Practice Schedule</li>
-        <li>Travel & Tournament Info</li>
-        <li>Standards & Conduct</li>
-      </ul>
-    </div>
-  </main>
-</body>
-</html>
-
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contact — BSU Mock Trial</title>
-  <style>
-    :root{ --crimson:#800000; --gold:#d4af37; --ink:#1b1b1b; --paper:#faf9f7; --muted:#6b7280; --maxw: 980px; }
-    html,body{height:100%}
-    body{margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Helvetica,Arial,sans-serif; color:var(--ink); background:var(--paper); line-height:1.6}
-    .display{font-family: Georgia, "Times New Roman", Times, serif; letter-spacing:.5px}
-    .wrap{max-width:var(--maxw); margin:0 auto; padding:28px 20px}
-    header{border-bottom:1px solid #eae7e2; background:#fff}
-    nav a{color:var(--ink); text-decoration:none; margin-right:18px}
-    nav a:hover{color:var(--crimson)}
-    .card{background:#fff; border:1px solid #eee7db; border-radius:12px; padding:14px}
-  </style>
-</head>
-<body>
-  <header>
-    <div class="wrap" style="display:flex; align-items:center; gap:14px">
-      <div class="display" style="font-weight:700">BSU Mock Trial</div>
-      <nav style="margin-left:auto" aria-label="Primary">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="leadership.html">Leadership</a>
-        <a href="events.html">Events</a>
-        <a href="resources.html">Resources</a>
-      </nav>
-    </div>
-  </header>
-  <main class="wrap">
-    <h1 class="display">Contact</h1>
-    <div class="card">
-      <p>Email: <a href="mailto:Jklapka@student.bridgew.edu">Jklapka@student.bridgew.edu</a></p>
-      <p>Club: Bridgewater State University Mock Trial Club</p>
-      <p>Address: 131 Summer Street, Bridgewater, MA 02325</p>
-    </div>
-  </main>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
