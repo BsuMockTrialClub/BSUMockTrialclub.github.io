@@ -6,27 +6,34 @@
   <title>Bridgewater State University Mock Trial Club</title>
   <meta name="description" content="Bridgewater State University Mock Trial Club — Veritas • Libertas • Justitia" />
   <style>
+  /* =====================
+     BSU Mock Trial — Refreshed Ivy Colorway
+     Adds tasteful color using crimson/gold tints, soft bands, and refined hovers.
+     ===================== */
   :root{
     --crimson:#800000;
+    --crimson-600:#a31313;
+    --crimson-700:#6a0000;
     --gold:#d4af37;
+    --gold-300:#e6c96a;
     --ink:#1b1b1b;
     --paper:#faf9f7;
+    --cream:#fffaf2;   /* warm hero/section tint */
+    --bone:#f4efe6;    /* soft band alt */
     --muted:#6b7280;
-    --maxw: 900px;
+    --maxw: 980px;
   }
 
   html,body{
-    height:100%; margin:0; padding:0;
-    scroll-behavior:smooth;
+    height:100%; margin:0; padding:0; scroll-behavior:smooth;
     background:var(--paper); color:var(--ink);
     font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Helvetica,Arial,sans-serif;
-    line-height:1.6;
-    -webkit-font-smoothing:antialiased;
+    line-height:1.6; -webkit-font-smoothing:antialiased;
   }
 
   /* Typography */
   .display{font-family:"Georgia","Times New Roman",serif; font-weight:700; letter-spacing:.3px;}
-  .smallcaps{font-variant-caps:small-caps; letter-spacing:.1em;}
+  .smallcaps{font-variant-caps:small-caps; letter-spacing:.11em;}
   .muted{color:var(--muted);}
 
   /* Layout */
@@ -35,126 +42,93 @@
   /* Header */
   header.site{
     position:sticky; top:0; z-index:50;
-    background:#fff; border-bottom:1px solid #eee;
+    background:#fff; border-bottom:1px solid rgba(0,0,0,.06);
     backdrop-filter:blur(6px);
   }
   .brand{display:flex; align-items:center; gap:14px;}
   .crest{
-    width:42px; height:42px; border-radius:50%;
-    border:2px solid var(--gold);
-    display:grid; place-items:center; background:#fff;
+    width:42px; height:42px; border-radius:50%; background:#fff;
+    border:2px solid var(--gold); display:grid; place-items:center;
+    box-shadow:0 2px 10px rgba(0,0,0,.04);
   }
   .crest svg{width:22px; height:22px; color:var(--crimson);}
 
   nav a{
-    color:var(--ink); text-decoration:none;
-    margin-left:20px; font-size:.95rem; transition:.2s ease;
+    color:var(--ink); text-decoration:none; margin-left:20px; font-size:.95rem; transition:color .2s ease;
+    border-bottom:2px solid transparent; padding-bottom:4px;
   }
-  nav a:hover{color:var(--crimson);}
+  nav a:hover{color:var(--crimson); border-bottom-color:var(--gold);} /* tasteful gold underline */
 
-  /* Hero */
-  .hero{text-align:center; padding:70px 0 50px;}
-  .hero h1{font-size:clamp(32px,6vw,48px); margin:0 0 6px;}
+  /* Hero — warm color band with subtle gradient */
+  .hero{
+    text-align:center; padding:76px 0 56px;
+    background:
+      radial-gradient(1200px 400px at 50% -10%, rgba(212,175,55,.16), transparent 60%),
+      linear-gradient(180deg, var(--cream), #ffffff 70%);
+    border-bottom:1px solid rgba(0,0,0,.06);
+  }
+  .hero h1{font-size:clamp(32px,6vw,50px); margin:0 0 6px;}
   .motto{color:var(--muted);}
   .divider{display:flex; justify-content:center; align-items:center; margin-top:22px; gap:14px;}
-  .rule{height:1px; width:180px; background:linear-gradient(to right,transparent,var(--gold),transparent);}
+  .rule{height:2px; width:200px; background:linear-gradient(to right,transparent,var(--gold),transparent);} /* a hair thicker */
   .bars{font-size:22px; color:var(--gold);}
 
   /* Cards */
   .card{
-    background:#fff;
-    border:1px solid #e9e4dc;
-    border-radius:14px;
-    padding:20px;
-    box-shadow:0 4px 16px rgba(0,0,0,.04);
+    background:#fff; border:1px solid #e8e1d6; border-radius:14px; padding:20px;
+    box-shadow:0 6px 24px rgba(0,0,0,.05);
   }
+  .card h2{font-family:"Georgia","Times New Roman",serif; font-size:1.45rem; margin:0 0 4px;}
+  .card .lede{color:var(--muted); margin-top:4px; margin-bottom:14px;}
+  .card--accent{border-color:var(--gold); box-shadow:0 8px 28px rgba(212,175,55,.18);} /* optional gold-accented card */
 
-  h2{font-family:"Georgia","Times New Roman",serif; font-size:1.5rem; margin-top:0;}
-  .lede{color:var(--muted); margin-top:4px; margin-bottom:14px;}
-
-  ul.clean{list-style:"—  "; padding-left:1.1rem;}
+  /* Lists */
+  ul.clean{list-style:"—  "; padding-left:1.2rem;}
   ul.tight > li{margin:6px 0;}
 
   /* Grids */
   .grid{display:grid; gap:20px;}
   @media(min-width:820px){ .grid{grid-template-columns:1fr 1fr;} }
 
-  /* Center two-card sections */
+  /* Center dual-column bands for color harmony */
   #about .grid, #resources .grid, #join .grid{
-    max-width:850px; margin:0 auto;
-    justify-content:center;
-    justify-items:center;
+    max-width:860px; margin:0 auto; justify-content:center; justify-items:center;
   }
 
-  /* Leadership grid */
-  .people{display:grid; gap:14px;}
-  @media(min-width:820px){ .people{grid-template-columns:repeat(3,1fr);} }
+  /* Section color bands for more visual rhythm */
+  #about{background:linear-gradient(180deg,#ffffff, var(--bone));}
+  #resources{background:linear-gradient(180deg,#ffffff, var(--cream));}
+  #join{background:linear-gradient(180deg,#ffffff, rgba(128,0,0,.05));}
 
-  /* CTA */
+  /* Leadership */
+  .people{display:grid; gap:14px}
+  @media(min-width:820px){.people{grid-template-columns:repeat(3,1fr)}}
+
+  /* Buttons */
   .cta{
-    display:inline-block; margin-top:12px; padding:10px 18px;
-    border-radius:999px;
-    background:var(--crimson); color:#fff;
-    text-decoration:none; font-weight:600;
-    border:1px solid var(--crimson); transition:.2s ease;
+    display:inline-block; margin-top:12px; padding:10px 18px; border-radius:999px;
+    background:var(--crimson); color:#fff; text-decoration:none; font-weight:600;
+    border:1px solid var(--crimson); transition:transform .12s ease, filter .2s ease, background .2s ease;
   }
-  .cta:hover{filter:brightness(.93);}
+  .cta:hover{filter:brightness(.95); transform:translateY(-1px);}
+  .btn-outline{
+    display:inline-block; margin-top:12px; padding:10px 18px; border-radius:999px;
+    background:#fff; color:var(--crimson); text-decoration:none; font-weight:600;
+    border:1px solid var(--gold); transition:background .2s ease, color .2s ease, transform .12s ease;
+  }
+  .btn-outline:hover{background:var(--gold); color:#1b1b1b; transform:translateY(-1px);}
 
-  /* Footer — Ivy Academic Style */
+  /* Footer — classic Ivy treatment */
   footer{
-    border-top:1px solid var(--gold);
+    border-top:2px solid var(--gold);
     background:#fff; text-align:center;
+    background-image:radial-gradient(600px 200px at 50% -20%, rgba(128,0,0,.06), transparent 60%);
   }
   footer .wrap{padding:36px 20px;}
-  footer .display{color:var(--crimson); font-size:1.15rem; margin-bottom:6px;}
+  footer .display{color:var(--crimson); font-size:1.18rem; margin-bottom:6px;}
   footer .smallcaps{color:var(--muted); margin-bottom:8px; letter-spacing:.14em;}
   footer .motto-line{color:var(--crimson); font-size:.95rem;}
 </style>
-
-    .brand{display:flex; align-items:center; gap:14px;}
-    .crest{width:44px; height:44px; border-radius:50%; border:2px solid var(--gold); display:grid; place-items:center; background:#fff}
-    .crest svg{width:24px; height:24px; color:var(--crimson);}
-
-    nav a{color:var(--ink); text-decoration:none; margin-right:18px; font-size:.95rem}
-    nav a:hover{color:var(--crimson)}
-
-    .hero{padding:64px 0 48px; text-align:center;}
-    .hero h1{margin:0 0 8px; font-size:clamp(28px,6vw,44px); font-weight:700}
-    .motto{color:var(--muted); margin:0 0 18px}
-
-    .divider{display:flex; justify-content:center; align-items:center; gap:14px; margin:22px 0 0;}
-    .rule{height:1px; background:linear-gradient(to right,transparent,var(--gold),transparent); width:200px;}
-    .bars{font-size:22px; color:var(--gold)} /* ‖ */
-
-    section{padding:28px 0;}
-    h2{font-family:"Georgia","Times New Roman",Times,serif; font-weight:700; font-size:clamp(20px,3.5vw,28px); margin:0 0 6px}
-    .lede{color:var(--muted); margin:0 0 16px}
-    .card{background:#fff; border:1px solid #eee7db; border-radius:14px; padding:18px; box-shadow:0 6px 20px rgba(0,0,0,.03)}
-
-    /* Base grid */
-    .grid{display:grid; gap:16px}
-    @media (min-width:820px){ .grid{grid-template-columns:1fr 1fr;} }
-
-    /* CENTER the key two-card sections on every page */
-    #about .grid, #resources .grid, #join .grid{
-      justify-content:center;   /* centers both columns */
-      justify-items:center;     /* centers each card inside column */
-      margin:0 auto;            /* center the whole grid block */
-      max-width:850px;          /* keep pair narrow and elegant */
-    }
-
-    /* Leadership people grid */
-    .people{display:grid; gap:14px}
-    @media(min-width:820px){.people{grid-template-columns:repeat(3,1fr)}}
-    .muted{color:var(--muted)}
-
-    footer{border-top:1px solid #eae7e2; color:#6b6b6b}
-    .footgrid{display:grid; gap:8px}
-    @media (min-width:760px){.footgrid{grid-template-columns:1fr auto}}
-
-    .badge{display:inline-flex; align-items:center; gap:10px; padding:10px 14px; border:1px solid #eee7db; border-radius:9999px; background:#fff}
-    .dot{width:8px; height:8px; border-radius:50%; background:var(--gold)}
-  </style>
 </head>
 <body>
   <header class="site">
@@ -315,25 +289,16 @@
     </section>
   </main>
 
-  <footer>
-    <div class="wrap footgrid">
-      <div>
-        <div class="smallcaps" style="color:var(--muted)">Bridgewater State University</div>
-        <div class="display" style="font-size:1rem; font-weight:700">Mock Trial Club</div>
-      </div>
-      <div style="text-align:right">
-        <div class="smallcaps" style="color:var(--muted)">Established</div>
-        <div>MMXXV</div>
-      </div>
-    </div>
-    <div class="wrap" style="padding-top:0; padding-bottom:40px; color:#8c8c8c; font-size:.9rem">
-      © <span id="year"></span> Bridgewater State University Mock Trial Club — <span style="color:var(--crimson)">Veritas</span> • <span style="color:var(--crimson)">Libertas</span> • <span style="color:var(--crimson)">Justitia</span>
-    </div>
-  </footer>
+  <footer style="border-top:1px solid var(--gold); background:#fff;">
+  <div class="wrap" style="text-align:center; padding:32px 20px;">
+    <div class="display" style="font-size:1.2rem; font-weight:700; color:var(--crimson); margin-bottom:6px;">Bridgewater State University Mock Trial Club</div>
+    <div class="smallcaps" style="letter-spacing:.12em; color:var(--muted); margin-bottom:10px;">Established MMXXV</div>
+    <div style="font-size:.95rem; color:var(--crimson);">© <span id="year"></span> — Veritas • Libertas • Justitia</div>
+  </div>
+</footer>
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
-
