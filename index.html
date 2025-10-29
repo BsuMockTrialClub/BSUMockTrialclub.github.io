@@ -249,3 +249,301 @@
   </script>
 </body>
 </html>
+
+<!-- =============================
+SUBPAGE SHELLS — paste your existing page content inside <main>
+Use these for: about.html, leadership.html, events.html, resources.html, contact.html
+They keep the same header, nav, styles, and footer for a unified look.
+============================= -->
+
+<!-- about.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About — BSU Mock Trial</title>
+  <style>
+    :root{ --crimson:#800000; --gold:#d4af37; --ink:#1b1b1b; --paper:#faf9f7; --muted:#6b7280; --maxw: 900px; }
+    html,body{height:100%;}
+    body{margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Helvetica,Arial,sans-serif; color:var(--ink); background:var(--paper); line-height:1.6}
+    .display{font-family:"Georgia","Times New Roman",Times,serif; letter-spacing:.5px}
+    .smallcaps{font-variant-caps:small-caps; letter-spacing:.08em}
+    .wrap{max-width:var(--maxw); margin:0 auto; padding:28px 20px}
+    header.site{border-bottom:1px solid #eae7e2; background:linear-gradient(180deg,#fff,#fff 40%,transparent); position:sticky; top:0; z-index:10}
+    .brand{display:flex; align-items:center; gap:14px}
+    .crest{width:44px; height:44px; border-radius:50%; border:2px solid var(--gold); display:grid; place-items:center; background:#fff}
+    .crest svg{width:24px; height:24px; color:var(--crimson)}
+    nav a{color:var(--ink); text-decoration:none; margin-right:18px; font-size:.95rem}
+    nav a:hover{color:var(--crimson)}
+    .card{background:#fff; border:1px solid #eee7db; border-radius:14px; padding:18px; box-shadow:0 6px 20px rgba(0,0,0,.03)}
+    .muted{color:var(--muted)}
+  </style>
+</head>
+<body>
+  <header class="site">
+    <div class="wrap">
+      <div class="brand">
+        <span class="crest" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v4"/><path d="M4 7h16"/><path d="M6.5 7 4 12a3 3 0 0 0 6 0L7.5 7"/><path d="M17.5 7 15 12a3 3 0 0 0 6 0L19.5 7"/><path d="M12 7v12"/><path d="M8 19h8"/></svg></span>
+        <nav style="margin-left:auto" aria-label="Primary">
+          <a href="index.html">Home</a>
+          <a href="about.html" aria-current="page">About</a>
+          <a href="leadership.html">Leadership</a>
+          <a href="events.html">Events</a>
+          <a href="resources.html">Resources</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <!-- Paste your existing ABOUT content here (keep your own headings/paragraphs). -->
+    <h1 class="display" style="margin:12px 0 10px">About Us</h1>
+    <div class="card">
+      <p class="muted" style="margin-top:0">Student‑run trial advocacy at Bridgewater State University under AMTA rules.</p>
+      <!-- Your content -->
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap" style="border-top:1px solid #eae7e2; color:#6b6b6b; padding:18px 20px">© <script>document.write(new Date().getFullYear())</script> BSU Mock Trial</div>
+  </footer>
+</body>
+</html>
+
+<!-- leadership.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Leadership — BSU Mock Trial</title>
+  <style>
+    :root{ --crimson:#800000; --gold:#d4af37; --ink:#1b1b1b; --paper:#faf9f7; --muted:#6b7280; --maxw: 900px; }
+    html,body{height:100%}
+    body{margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Helvetica,Arial,sans-serif; color:var(--ink); background:var(--paper); line-height:1.6}
+    .display{font-family:"Georgia","Times New Roman",Times,serif; letter-spacing:.5px}
+    .wrap{max-width:var(--maxw); margin:0 auto; padding:28px 20px}
+    header.site{border-bottom:1px solid #eae7e2; background:linear-gradient(180deg,#fff,#fff 40%,transparent); position:sticky; top:0; z-index:10}
+    .brand{display:flex; align-items:center; gap:14px}
+    .crest{width:44px; height:44px; border-radius:50%; border:2px solid var(--gold); display:grid; place-items:center; background:#fff}
+    .crest svg{width:24px; height:24px; color:var(--crimson)}
+    nav a{color:var(--ink); text-decoration:none; margin-right:18px; font-size:.95rem}
+    nav a:hover{color:var(--crimson)}
+    .grid{display:grid; gap:14px}
+    @media(min-width:820px){.grid{grid-template-columns:repeat(3,1fr)}}
+    .card{background:#fff; border:1px solid #eee7db; border-radius:12px; padding:14px}
+    .muted{color:var(--muted)}
+  </style>
+</head>
+<body>
+  <header class="site">
+    <div class="wrap">
+      <div class="brand">
+        <span class="crest" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v4"/><path d="M4 7h16"/><path d="M6.5 7 4 12a3 3 0 0 0 6 0L7.5 7"/><path d="M17.5 7 15 12a3 3 0 0 0 6 0L19.5 7"/><path d="M12 7v12"/><path d="M8 19h8"/></svg></span>
+        <nav style="margin-left:auto" aria-label="Primary">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="leadership.html" aria-current="page">Leadership</a>
+          <a href="events.html">Events</a>
+          <a href="resources.html">Resources</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <h1 class="display" style="margin:12px 0 10px">Executive Board</h1>
+    <div class="grid">
+      <!-- Paste your existing cards or list here -->
+      <div class="card"><h2 class="display" style="margin:.25rem 0">Jeremy Klapka</h2><div class="muted">President</div></div>
+      <div class="card"><h2 class="display" style="margin:.25rem 0">Adam Vinton</h2><div class="muted">Vice President</div></div>
+      <div class="card"><h2 class="display" style="margin:.25rem 0">Robert Latorra‑Torres</h2><div class="muted">Treasurer</div></div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap" style="border-top:1px solid #eae7e2; color:#6b6b6b; padding:18px 20px">© <script>document.write(new Date().getFullYear())</script> BSU Mock Trial</div>
+  </footer>
+</body>
+</html>
+
+<!-- events.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Events — BSU Mock Trial</title>
+  <style>
+    :root{ --crimson:#800000; --gold:#d4af37; --ink:#1b1b1b; --paper:#faf9f7; --muted:#6b7280; --maxw: 900px; }
+    html,body{height:100%}
+    body{margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Helvetica,Arial,sans-serif; color:var(--ink); background:var(--paper); line-height:1.6}
+    .display{font-family:"Georgia","Times New Roman",Times,serif}
+    .wrap{max-width:var(--maxw); margin:0 auto; padding:28px 20px}
+    header.site{border-bottom:1px solid #eae7e2; background:linear-gradient(180deg,#fff,#fff 40%,transparent); position:sticky; top:0; z-index:10}
+    .brand{display:flex; align-items:center; gap:14px}
+    .crest{width:44px; height:44px; border-radius:50%; border:2px solid var(--gold); display:grid; place-items:center; background:#fff}
+    .crest svg{width:24px; height:24px; color:var(--crimson)}
+    nav a{color:var(--ink); text-decoration:none; margin-right:18px; font-size:.95rem}
+    nav a:hover{color:var(--crimson)}
+    .card{background:#fff; border:1px solid #eee7db; border-radius:12px; padding:14px}
+    .muted{color:#6b7280}
+    .list{display:grid; gap:12px}
+  </style>
+</head>
+<body>
+  <header class="site">
+    <div class="wrap">
+      <div class="brand">
+        <span class="crest" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v4"/><path d="M4 7h16"/><path d="M6.5 7 4 12a3 3 0 0 0 6 0L7.5 7"/><path d="M17.5 7 15 12a3 3 0 0 0 6 0L19.5 7"/><path d="M12 7v12"/><path d="M8 19h8"/></svg></span>
+        <nav style="margin-left:auto" aria-label="Primary">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="leadership.html">Leadership</a>
+          <a href="events.html" aria-current="page">Events</a>
+          <a href="resources.html">Resources</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <h1 class="display" style="margin:12px 0 10px">Upcoming Events</h1>
+    <div class="card">
+      <div class="list">
+        <div class="muted">No events posted yet.</div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap" style="border-top:1px solid #eae7e2; color:#6b6b6b; padding:18px 20px">© <script>document.write(new Date().getFullYear())</script> BSU Mock Trial</div>
+  </footer>
+</body>
+</html>
+
+<!-- resources.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Resources — BSU Mock Trial</title>
+  <style>
+    :root{ --crimson:#800000; --gold:#d4af37; --ink:#1b1b1b; --paper:#faf9f7; --muted:#6b7280; --maxw: 900px; }
+    html,body{height:100%}
+    body{margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Helvetica,Arial,sans-serif; color:var(--ink); background:var(--paper); line-height:1.6}
+    .display{font-family:"Georgia","Times New Roman",Times,serif}
+    .wrap{max-width:var(--maxw); margin:0 auto; padding:28px 20px}
+    header.site{border-bottom:1px solid #eae7e2; background:linear-gradient(180deg,#fff,#fff 40%,transparent); position:sticky; top:0; z-index:10}
+    .brand{display:flex; align-items:center; gap:14px}
+    .crest{width:44px; height:44px; border-radius:50%; border:2px solid var(--gold); display:grid; place-items:center; background:#fff}
+    .crest svg{width:24px; height:24px; color:var(--crimson)}
+    nav a{color:var(--ink); text-decoration:none; margin-right:18px; font-size:.95rem}
+    nav a:hover{color:var(--crimson)}
+    .card{background:#fff; border:1px solid #eee7db; border-radius:12px; padding:14px}
+    h2{font-family:"Georgia","Times New Roman",Times,serif; font-size:1.2rem}
+    ul.clean{list-style:"—  "; padding-left:1.1rem}
+  </style>
+</head>
+<body>
+  <header class="site">
+    <div class="wrap">
+      <div class="brand">
+        <span class="crest" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v4"/><path d="M4 7h16"/><path d="M6.5 7 4 12a3 3 0 0 0 6 0L7.5 7"/><path d="M17.5 7 15 12a3 3 0 0 0 6 0L19.5 7"/><path d="M12 7v12"/><path d="M8 19h8"/></svg></span>
+        <nav style="margin-left:auto" aria-label="Primary">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="leadership.html">Leadership</a>
+          <a href="events.html">Events</a>
+          <a href="resources.html" aria-current="page">Resources</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <h1 class="display" style="margin:12px 0 10px">Resources</h1>
+    <div class="card">
+      <h2>Core Materials</h2>
+      <ul class="clean">
+        <li>AMTA Case Packet (posted when released)</li>
+        <li>Rules of Evidence (AMTA)</li>
+        <li>Objections Quick Reference</li>
+      </ul>
+    </div>
+    <div class="card" style="margin-top:12px">
+      <h2>Training</h2>
+      <ul class="clean">
+        <li>Opening Statements: structure &amp; theory</li>
+        <li>Direct Examination: form &amp; foundation</li>
+        <li>Cross Examination: control &amp; impeachment</li>
+        <li>Exhibits &amp; Foundations</li>
+      </ul>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap" style="border-top:1px solid #eae7e2; color:#6b6b6b; padding:18px 20px">© <script>document.write(new Date().getFullYear())</script> BSU Mock Trial</div>
+  </footer>
+</body>
+</html>
+
+<!-- contact.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact — BSU Mock Trial</title>
+  <style>
+    :root{ --crimson:#800000; --gold:#d4af37; --ink:#1b1b1b; --paper:#faf9f7; --muted:#6b7280; --maxw: 900px; }
+    html,body{height:100%}
+    body{margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Helvetica,Arial,sans-serif; color:var(--ink); background:var(--paper); line-height:1.6}
+    .display{font-family:"Georgia","Times New Roman",Times,serif}
+    .wrap{max-width:var(--maxw); margin:0 auto; padding:28px 20px}
+    header.site{border-bottom:1px solid #eae7e2; background:linear-gradient(180deg,#fff,#fff 40%,transparent); position:sticky; top:0; z-index:10}
+    .brand{display:flex; align-items:center; gap:14px}
+    .crest{width:44px; height:44px; border-radius:50%; border:2px solid var(--gold); display:grid; place-items:center; background:#fff}
+    .crest svg{width:24px; height:24px; color:var(--crimson)}
+    nav a{color:var(--ink); text-decoration:none; margin-right:18px; font-size:.95rem}
+    nav a:hover{color:var(--crimson)}
+    .card{background:#fff; border:1px solid #eee7db; border-radius:12px; padding:14px}
+  </style>
+</head>
+<body>
+  <header class="site">
+    <div class="wrap">
+      <div class="brand">
+        <span class="crest" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v4"/><path d="M4 7h16"/><path d="M6.5 7 4 12a3 3 0 0 0 6 0L7.5 7"/><path d="M17.5 7 15 12a3 3 0 0 0 6 0L19.5 7"/><path d="M12 7v12"/><path d="M8 19h8"/></svg></span>
+        <nav style="margin-left:auto" aria-label="Primary">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="leadership.html">Leadership</a>
+          <a href="events.html">Events</a>
+          <a href="resources.html">Resources</a>
+          <a href="contact.html" aria-current="page">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <h1 class="display" style="margin:12px 0 10px">Contact</h1>
+    <div class="card">
+      <p>Email: <a href="mailto:Jklapka@student.bridgew.edu">Jklapka@student.bridgew.edu</a></p>
+      <p>Club: Bridgewater State University Mock Trial Club</p>
+      <p>Address: 131 Summer Street, Bridgewater, MA 02325</p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap" style="border-top:1px solid #eae7e2; color:#6b6b6b; padding:18px 20px">© <script>document.write(new Date().getFullYear())</script> BSU Mock Trial</div>
+  </footer>
+</body>
+</html>
