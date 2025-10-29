@@ -304,14 +304,8 @@
 </html>
 
 footer {
-  border-top:2px solid var(--gold);
-  background: var(--crimson); /* <- solid color */
-  text-align:center;
-}
-footer .display,
-footer .motto-line {
-  color: #fff; /* make text white for contrast */
-}
-footer .smallcaps {
-  color: rgba(255,255,255,.75); /* tasteful muted white */
-}
+  <footer class="footer--crimson">
+  <div class="wrap">
+    ...
+  </div>
+</footer>
