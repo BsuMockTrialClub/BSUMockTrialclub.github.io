@@ -5,60 +5,54 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>About — BSU Mock Trial</title>
   <meta name="description" content="About the Bridgewater State University Mock Trial Club" />
-
-  <!-- Load the shared stylesheet (root user site, so leading slash is correct) -->
-  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/main.css?v=10">
 </head>
 <body>
+
+  <!-- FULL MATCHING HEADER -->
   <header class="site">
-    <div class="wrap" style="display:flex; align-items:center; gap:14px">
-      <div class="display" style="font-weight:700">BSU Mock Trial</div>
-      <nav style="margin-left:auto" aria-label="Primary">
-        <a href="index.html">Home</a>
-        <a href="about.html" aria-current="page">About</a>
-        <a href="leadership.html">Leadership</a>
-        <a href="events.html">Events</a>
-        <a href="resources.html">Resources</a>
-        <a href="contact.html">Join</a>
-      </nav>
+    <div class="wrap">
+      <div class="brand">
+        <span class="crest" aria-hidden="true" title="BSU Mock Trial Crest">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+          stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3v4"/>
+            <path d="M4 7h16"/>
+            <path d="M6.5 7 4 12a3 3 0 0 0 6 0L7.5 7"/>
+            <path d="M17.5 7 15 12a3 3 0 0 0 6 0L19.5 7"/>
+            <path d="M12 7v12"/>
+            <path d="M8 19h8"/>
+          </svg>
+        </span>
+
+        <div>
+          <div class="smallcaps" style="color:var(--muted); font-size:.9rem;">
+            Bridgewater State University
+          </div>
+          <div class="display" style="font-size:1.25rem; font-weight:700;">
+            Mock Trial Club
+          </div>
+        </div>
+
+        <div style="margin-left:auto;">
+          <nav aria-label="Primary">
+            <a href="index.html">Home</a>
+            <a href="about.html" aria-current="page">About</a>
+            <a href="leadership.html">Leadership</a>
+            <a href="events.html">Events</a>
+            <a href="resources.html">Resources</a>
+            <a href="contact.html">Join</a>
+          </nav>
+        </div>
+      </div>
     </div>
   </header>
-  
+
+  <!-- CONTENT -->
   <main>
     <section id="about">
       <div class="wrap grid">
         <article class="card">
           <h2>What We Do</h2>
-          <p class="lede">A disciplined courtroom simulation: opening statements, examinations, objections, and closing arguments built on a single case packet.</p>
-          <ul class="clean tight">
-            <li>Attorney &amp; witness roles with coaching</li>
-            <li>Case theory, evidence handling, and objections</li>
-            <li>Composure, clarity, and presence under pressure</li>
-          </ul>
-        </article>
-        <aside class="card">
-          <h2>Season at a Glance</h2>
-          <ul class="clean tight">
-            <li>Case release → training workshops</li>
-            <li>Scrimmages and invitationals</li>
-            <li>Regional competition</li>
-          </ul>
-          <a class="cta" href="contact.html" aria-label="Join BSU Mock Trial">Request to Join</a>
-        </aside>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="wrap" style="text-align:center; padding:32px 20px;">
-      <div class="display" style="font-size:1.2rem; font-weight:700; color:var(--crimson); margin-bottom:6px;">Bridgewater State University Mock Trial Club</div>
-      <div class="smallcaps" style="letter-spacing:.12em; color:var(--muted); margin-bottom:10px;">Established 2025</div>
-      <div style="font-size:.95rem; color:var(--crimson);">© <span id="year"></span> — Veritas • Libertas • Justitia</div>
-    </div>
-  </footer>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-</body>
-</html>
+          <p class="lede">Mock Trial is a competitive courtroom simulation — building advocacy, persuasion, and composure.</p>
+          <
